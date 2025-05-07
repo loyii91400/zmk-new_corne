@@ -30,6 +30,7 @@
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
+            tapping-term-ms = <400>;
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
@@ -82,9 +83,9 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &trans        &trans        &trans     &trans     &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &trans     &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&kp ESC  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans   &trans        &trans        &trans     &trans     &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans   &out OUT_USB  &out OUT_BLE  &none      &none      &trans     &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                     &trans     &trans     &kp SPACE                                                             &kp ENTER  &trans     &trans
             >;
 
@@ -92,7 +93,7 @@
         };
 
         layer_3 {
-            display-name = "Fn";
+            display-name = "FUNCTION";
             bindings = <
 &kp ESC  &kp F1          &kp F2          &kp F3        &kp F4        &kp F5                                    &mmv MOVE_UP                      &kp F6       &kp F7     &kp F8   &kp F9      &kp F10          &kp F11
 &trans   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &kp LEFT     &kp DOWN   &kp UP   &kp RIGHT   &kp PRINTSCREEN  &kp F12
@@ -104,11 +105,11 @@
         };
 
         layer_4 {
-            display-name = "Mouse";
+            display-name = "MOUSE";
             bindings = <
-&trans   &trans   &trans            &trans            &trans            &trans                                 &mmv MOVE_UP                      &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
-&trans   &trans   &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans    &mkp LCLK    &mkp MCLK       &mkp RCLK  &trans    &trans
-&trans   &trans   &trans            &trans            &trans            &trans    &kp C_MUTE                   &mmv MOVE_DOWN                    &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
+&kp ESC   &trans   &trans            &trans            &trans            &trans                                 &mmv MOVE_UP                      &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
+&trans    &trans   &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans    &mkp LCLK    &mkp MCLK       &mkp RCLK  &trans    &trans
+&trans    &trans   &trans            &trans            &trans            &trans    &kp C_MUTE                   &mmv MOVE_DOWN                    &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
                                     &trans            &trans            &trans                                                                   &trans    &trans       &trans
             >;
 
