@@ -107,9 +107,9 @@
         layer_4 {
             display-name = "MOUSE";
             bindings = <
-&kp ESC   &trans   &trans            &mmv MOUSE_UP     &trans            &trans                                 &mmv MOVE_UP                      &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
-&trans    &trans   &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans    &mkp LCLK    &mkp MCLK       &mkp RCLK  &trans    &trans
-&trans    &trans   &trans            &trans            &trans            &trans    &kp C_MUTE                   &mmv MOVE_DOWN                    &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
+&kp ESC   &trans   &trans            &mmv MOVE_UP     &trans            &trans                                 &mmv MOVE_UP                      &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
+&trans    &trans   &mmv MOVE_LEFT    &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans    &mkp LCLK    &mkp MCLK       &mkp RCLK  &trans    &trans
+&trans    &trans   &trans            &trans           &trans            &trans    &kp C_MUTE                   &mmv MOVE_DOWN                    &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
                                     &trans            &trans            &trans                                                                   &trans    &trans       &trans
             >;
 
