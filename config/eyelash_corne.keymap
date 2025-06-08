@@ -20,6 +20,8 @@
     delay-ms = <0>;                   // 0
 };
 
+
+
 &mmv {
     time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
@@ -34,6 +36,16 @@
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_game {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            layers = <0 5>;
+            bindings = <&tog 5>;
         };
     };
 
@@ -111,6 +123,19 @@
 &trans    &trans   &mmv MOVE_LEFT    &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans    &mkp LCLK    &mkp MCLK       &mkp RCLK  &trans    &trans
 &trans    &trans   &trans            &trans           &trans            &trans    &kp C_MUTE                   &mmv MOVE_DOWN                    &trans    &msc SCRL_UP &msc SCRL_DOWN  &trans     &trans    &trans
                                     &trans            &trans            &trans                                                                   &trans    &trans       &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+
+        layer_5 {
+            display-name = "GAME";
+            bindings = <
+&kp ESC           &kp Q   &kp W     &kp E    &kp R       &kp T                                   &mmv MOVE_UP                      &trans    &trans   &trans   &trans     &trans    &trans
+&kp CAPS          &kp A   &kp S     &kp D    &kp F       &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans    &trans   &trans   &trans     &trans    &trans
+&kp LEFT_SHIFT    &kp Z   &kp X     &kp C    &kp V       &kp B      &kp C_MUTE                   &mmv MOVE_DOWN                    &trans    &trans   &trans   &trans     &trans    &trans
+                                    &kp 1    &kp 2       &kp SPACE                                                                 &trans    &trans   &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
